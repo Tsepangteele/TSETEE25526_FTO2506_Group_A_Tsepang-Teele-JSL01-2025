@@ -1,67 +1,63 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <meta />
-    <meta />
-    <title>Document</title>
-  </head>
-
-  <body>
-    <!-- Navigation Sidebar: Contains the logo, navigation links for boards, and theme toggle. -->
-    <nav>
-      <div>
-        <h4>ALL BOARDS (1)</h4>
-        <button>Launch Career</button>
-      </div>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Kanban Project</title>
+</head>
+<body class="bg-[#F4F7FD]">
+  <div class="flex min-h-screen w-full md:flex">
+ <!-- Sidebar -->
+    <nav class="hidden md:block w-[340px] bg-white shadow-md">
+      <h1 class=" flex flex-row gap-2 p-12 font-semibold text-3xl"><img src="Kanbanlogo.png" alt="Kanban Logo" class="h-8 w-8 shrink-0 mt-1">
+      kanban
+      </h1>
+      <div class="p-6 text-[#828FA3]">ALL BOARDS (1)</div>
+      <button class="bg-[#635FC7] w-[290px] h-[45px] rounded-tr-3xl rounded-br-3xl p-2 mb-6 text-white font-semibold">
+        Launch Career
+      </button>
     </nav>
 
-    <!-- Main Layout: Header with board title, add task button, and main content area for task columns. -->
-    <div>
-      <header>
-        <div>
-          <h2>Launch Career</h2>
-        </div>
+ <!-- Main area -->
+    <main class="flex-1">
+ <!-- Header -->
+      <header class="hidden md:flex bg-white h-[117px] flex items-center pl-6 gap-4 shadow-md">
+        <h2 class="text-2xl font-semibold">Launch Career</h2>
       </header>
+ <!-- Kanban Columns Grid -->
+      <section aria-label="Kanban Columns"
+               class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full p-6">
+<!-- TODO -->
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-2 text-xs font-semibold tracking-[0.2em] text-[#828FA3]">
+            <span class="inline-block h-3 w-3 rounded-full bg-sky-400"></span> TODO (4)
+          </div>
+          <div class="bg-white w-full p-4 rounded-2xl shadow-sm ring-1 ring-black/5 font-semibold">Launch Epic Career 🚀</div>
+          <div class="bg-white w-full p-4 rounded-2xl shadow-sm ring-1 ring-black/5 font-semibold">Conquer React 🧠</div>
+          <div class="bg-white w-full p-4 rounded-2xl shadow-sm ring-1 ring-black/5 font-semibold">Understand Databases ⚙️</div>
+          <div class="bg-white w-full p-4 rounded-2xl shadow-sm ring-1 ring-black/5 font-semibold">Crush Frameworks 🗂️</div>
+        </div>
 
-      <div>
-        <main>
-          <!-- Task Columns: Display tasks grouped by status (TODO, DOING, DONE). -->
-          <div>
-            <div>
-              <span></span>
-              <h4>TODO</h4>
-            </div>
-            <!-- Tasks container for TODO -->
-            <div>
-              <div>Launch Epic Career 🚀</div>
-              <div>Learn Data Structures and Algorithms 📚</div>
-            </div>
+        <!-- DOING -->
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-2 text-xs font-semibold tracking-[0.2em] text-[#828FA3]">
+            <span class="inline-block h-3 w-3 rounded-full bg-purple-500"></span> DOING (2)
           </div>
-          <!-- DOING Column -->
-          <div>
-            <div>
-              <span></span>
-              <h4>DOING</h4>
-            </div>
-            <!-- Tasks container for DOING -->
-            <div>
-              <div>Master JavaScript 💛</div>
-              <div>Keep on Going 🏆</div>
-            </div>
+          <div class="bg-white w-full p-4 rounded-2xl shadow-sm ring-1 ring-black/5 font-semibold">Master JavaScript 💛</div>
+          <div class="bg-white w-full p-4 rounded-2xl shadow-sm ring-1 ring-black/5 font-semibold">Never Give Up 🏆</div>
+        </div>
+
+        <!-- DONE -->
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-2 text-xs font-semibold tracking-[0.2em] text-[#828FA3]">
+            <span class="inline-block h-3 w-3 rounded-full bg-emerald-400"></span> DONE (2)
           </div>
-          <!-- DONE Column -->
-          <div>
-            <div>
-              <span></span>
-              <h4>DONE</h4>
-            </div>
-            <!-- Tasks container for DONE -->
-            <div>
-              <div>Contribute to Open Source Projects 🌐</div>
-              <div>Build Portfolio Projects 🛠️</div>
-            </div>
-          </div>
-        </main>
-      </div>
-    </div>
-  </body>
+          <div class="bg-white w-full p-4 rounded-2xl shadow-sm ring-1 ring-black/5 font-semibold">Explore ES6 Features 🚀</div>
+          <div class="bg-white w-full p-4 rounded-2xl shadow-sm ring-1 ring-black/5 font-semibold">Have fun 🥳</div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
 </html>
